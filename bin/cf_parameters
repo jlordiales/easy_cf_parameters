@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "easy_cf_parameters"
+
+generator = EasyCfParameters::CFParameterGenerator.new
+puts generator.get_cf_parameters(ARGV[0])
