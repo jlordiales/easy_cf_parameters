@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'easy_cf_parameters/version'
+require 'cf_parameters/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "easy_cf_parameters"
-  spec.version       = EasyCfParameters::VERSION
+  spec.name          = "cf_parameters"
+  spec.version       = CfParameters::VERSION
   spec.authors       = ["Jose Luis Ordiales Coscia"]
   spec.email         = ["jlordiales@gmail.com"]
 

@@ -1,4 +1,4 @@
-# EasyCfParameters
+# CfParameters
 
 CloudFormation JSON files to specify input parameters are cumbersome to
 [write](http://blogs.aws.amazon.com/application-management/post/Tx1A23GYVMVFKFD/Passing-Parameters-to-CloudFormation-Stacks-with-the-AWS-CLI-and-Powershell).
@@ -13,7 +13,7 @@ pass that to CloudFormation together with your template.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'easy_cf_parameters'
+gem 'cf_parameters'
 ```
 
 And then execute:
@@ -22,7 +22,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install easy_cf_parameters
+    $ gem install cf_parameters
 
 ## Usage
 ```bash

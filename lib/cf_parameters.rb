@@ -1,8 +1,8 @@
-require "easy_cf_parameters/version"
+require "cf_parameters/version"
 require "yaml"
 require "json"
 
-module EasyCfParameters
+module CfParameters
   class CFParameterGenerator
     def get_cf_parameters(yamlInput)
       yaml_parameters = YAML.load_file(yamlInput)
