@@ -1,8 +1,12 @@
 # EasyCfParameters
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/easy_cf_parameters`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+CloudFormation JSON files to specify input parameters are cumbersome to
+[write](http://blogs.aws.amazon.com/application-management/post/Tx1A23GYVMVFKFD/Passing-Parameters-to-CloudFormation-Stacks-with-the-AWS-CLI-and-Powershell).
+They also don't provide any easy way to specify values from environment
+variables. This small script allows you to specify key/value pairs in YAML
+format with the added capability of resolving those values from environment
+variables if the value starts with $.  You can write the output to a file and
+pass that to CloudFormation together with your template.
 
 ## Installation
 
@@ -21,13 +25,28 @@ Or install it yourself as:
     $ gem install easy_cf_parameters
 
 ## Usage
+```bash
+cat some.yml
 
-TODO: Write usage instructions here
+key1: value1
+key2: $SOME_ENV_VAR
 
-## Development
+export SOME_ENV_VAR=5
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+cf_parameters some.yml
 
+[
+  {
+    "ParameterKey": "key1",
+    "ParamterValue": "value1"
+  },
+  {
+    "ParameterKey": "key2",
+    "ParamterValue": "5"
+  }
+]
+
+```
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/easy_cf_parameters/fork )
