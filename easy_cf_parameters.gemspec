@@ -9,10 +9,6 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jose Luis Ordiales Coscia"]
   spec.email         = ["jlordiales@gmail.com"]
 
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
-  end
-
   spec.summary       = %q{Convert YAML to the JSON File format expected by CloudFormation}
   spec.description   = %q{CloudFormation JSON files to specify input parameters are cumbersome
   to write. They also don't provide any easy way to specify values from enviroment variables.
