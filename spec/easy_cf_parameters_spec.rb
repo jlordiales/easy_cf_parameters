@@ -68,4 +68,17 @@ describe CfParameters do
 
     expect(cf_json).to eq(expected_json)
   end
+
+  it 'outputs an empty value if trying to use an environment variable not defined' do
+    yaml_text = "key1: $SOME_VAR"
+
+    expected_json = [{"ParameterKey" => "key1", "ParameterValue" => ""}]
+
+    allow(YAML).to receive(:load_file).with("test.yml") {YAML.load(yaml_text)}
+    allow(ENV).to receive(:[]).with("SOME_VAR")
+
+    cf_json = JSON.parse(generator.get_cf_parameters("test.yml"))
+
+    expect(cf_json).to eq(expected_json)
+  end
 end
