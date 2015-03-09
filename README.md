@@ -1,4 +1,5 @@
 [![Gem Version](https://badge.fury.io/rb/cf_parameters.svg)](http://badge.fury.io/rb/cf_parameters)
+[![Build Status](https://travis-ci.org/jlordiales/easy_cf_parameters.svg?branch=master)](https://travis-ci.org/jlordiales/easy_cf_parameters)
 
 # CfParameters
 
