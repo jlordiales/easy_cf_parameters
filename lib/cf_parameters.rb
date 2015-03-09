@@ -9,8 +9,9 @@ module CfParameters
       cf_parameters = []
 
       yaml_parameters.each do |key, value|
+          value ||= ""
           realValue = if value.start_with?("$") then ENV[value[1..-1]] else value end
-          new_parameter = {"ParameterKey" => key, "ParamterValue" => realValue}
+          new_parameter = {"ParameterKey" => key, "ParameterValue" => realValue}
           cf_parameters.push(new_parameter)
       end
       JSON.pretty_generate(cf_parameters)
