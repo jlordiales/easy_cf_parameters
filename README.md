@@ -41,11 +41,11 @@ cf_parameters some.yml
 [
   {
     "ParameterKey": "key1",
-    "ParamterValue": "value1"
+    "ParameterValue": "value1"
   },
   {
     "ParameterKey": "key2",
-    "ParamterValue": "5"
+    "ParameterValue": "5"
   }
 ]
 
