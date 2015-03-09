@@ -1,4 +1,5 @@
 [![Gem Version](https://badge.fury.io/rb/cf_parameters.svg)](http://badge.fury.io/rb/cf_parameters)
+
 # CfParameters
 
 CloudFormation JSON files to specify input parameters are cumbersome to
